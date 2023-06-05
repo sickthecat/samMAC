@@ -11,7 +11,7 @@ def generate_mac_address():
     zyxel_octets = ["F8", "0D", "A9"]
     juniper_octets = ["50", "C5", "8D"]
     sony_octets = ["AC", "80", "0A"]
-    ms_octets =   ["FC", "8C"," 11"]
+    ms_octets =  ["FC", "8C"," 11"]
 
     octets = [
         samsung_octets,
