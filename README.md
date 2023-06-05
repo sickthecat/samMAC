@@ -1,3 +1,3 @@
 # samMAC
-samMAC - generate samsung mac addresses
+samMAC - generate a mac addresses
 - What else do you need for mac spoofing?
