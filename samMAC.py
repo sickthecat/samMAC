@@ -1,6 +1,6 @@
 import random
 import re
-#samMAC.py 
+#samMAC.py
 # I like to spoof macs to force xfinity to give me a new IP after disabling their routing function on the gateway and hooking up a router with mac spoofing capabilities.
 def generate_mac_address():
     samsung_octets = ["CC","E9","FA"]
@@ -14,19 +14,19 @@ def generate_mac_address():
     ms_octets =   ["FC", "8C"," 11"]
 
     octets = [
-	samsung_octets,
-	cisco_octets,
-	amazon_octets,
-	apple_octets,
-	dell_octets,
-	zyxel_octets,
-	juniper_octets,
-	sony_octets,
-    ms_octets
-	]
+        samsung_octets,
+        cisco_octets,
+        amazon_octets,
+        apple_octets,
+        dell_octets,
+        zyxel_octets,
+        juniper_octets,
+        sony_octets,
+        ms_octets
+        ]
 
     length = len(octets) -1 # raw length of array with -1 computer logic for future adapability
-    prefix = octets[random.randint(0, length)] 
+    prefix = octets[random.randint(0, length)]
 
     # Generate the remaining octets
     remaining_octets = [random.randint(0x00, 0xFF) for _ in range(3)]
