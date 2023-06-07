@@ -4,14 +4,17 @@ import re
 # I like to spoof macs to force xfinity to give me a new IP after disabling their routing function on the gateway and hooking up a router with mac spoofing capabilities.
 def generate_mac_address():
     samsung_octets = ["CC","E9","FA"]
-    cisco_octets = ["90", "88", "55"]
-    amazon_octets =  ["28", "73", "F6"]
+    cisco_octets =  ["90", "88", "55"]
+    amazon_octets = ["28", "73", "F6"]
     apple_octets  = ["20", "15", "82"]
-    dell_octets = ["78", "2B", "CB"]
-    zyxel_octets = ["F8", "0D", "A9"]
+    dell_octets =   ["78", "2B", "CB"]
+    zyxel_octets =  ["F8", "0D", "A9"]
     juniper_octets = ["50", "C5", "8D"]
-    sony_octets = ["AC", "80", "0A"]
-    ms_octets =   ["FC", "8C"," 11"]
+    sony_octets =   ["AC", "80", "0A"]
+    ms_octets =     ["FC", "8C"," 11"]
+    omron_octets =  ["00","00","0A"]
+    roku_octets =   ["00","0D","4B"]
+    mil_octets =    ["00","26","F6"]
 
     octets = [
 	samsung_octets,
@@ -22,10 +25,13 @@ def generate_mac_address():
 	zyxel_octets,
 	juniper_octets,
 	sony_octets,
-        ms_octets
+        ms_octets,
+	omron_octets,
+	roku_octets,
+        mil_octets
 	]
 
-    length = len(octets) -1 # raw length of array with -1 computer logic for future adapability
+    length = len(octets) -1 # Raw length of array with -1 computer logic for future adapability
     prefix = octets[random.randint(0, length)] 
 
     # Generate the remaining octets
